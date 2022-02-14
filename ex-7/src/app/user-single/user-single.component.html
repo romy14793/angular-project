@@ -1,0 +1,17 @@
+<div *ngIf="singUser; else noUser" class="container-fluid bg-orange mb-3 p-4">
+  <div>
+    <img class="w-25" src="{{ singUser.profilePhotoUrl }}" />
+    <b> {{ singUser.name }} {{ singUser.surname }}</b>
+    {{ singUser.age }}
+    {{ singUser.address.city }}
+    <button (click)="clicked()">Delete</button>
+  </div>
+</div>
+
+<ng-template #noUser>
+  <div
+    class="container-fluid bg-orange mb-3 d-flex align-items-center justify-content-center"
+  >
+    <h6>user-single.component</h6>
+  </div>
+</ng-template>

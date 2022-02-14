@@ -1,0 +1,17 @@
+<h5>user-detail.component</h5>
+<div class="user text-start">
+  <p *ngFor="let property of properties">
+    {{ property[0] | titlecase }} : {{ property[1] }}
+  </p>
+
+  <p>Date of birth: {{ user.dateOfBirth | date: "dd  MMM  yyyy" }}</p>
+  <img class="w-50" src="{{ user.profilePhotoUrl }}" />
+  <p>
+    <b>Company: {{ user.companies[0].name }}</b>
+  </p>
+  <p>Description: {{ user.companies[0].description }}</p>
+  <p>
+    <b>Company: {{ user.companies[1].name }}</b>
+  </p>
+  <p>Description: {{ user.companies[1].description }}</p>
+</div>
